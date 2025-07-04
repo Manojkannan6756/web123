@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothigai</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <link rel="icon" type="image" href="pothigai 2.jpg">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+      <div class="nav">
+
+            <div class="nav-header">
+                <h1>Pothigai</h1>
+
+                <div class="menu-bar" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="items-cart">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="box1">
+                        <div class="cart-count">0</div>
+                        <ion-icon name="cart" id="cart-icon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cart  ">
+                <div class="cart-title">Cart Items</div>
+                <div class="cart-content">
+<!--
+                    <div class="cart-box">
+                        <img src="../assets/meals.avif" class="cart-img">
+                        <div class="detailed-box">
+                            <div class="cart-food-title">Meals</div>
+                            <div class="price-box"></div>
+                            <div class="cart-price">Rs.100</div>
+                            <div class="cart-amt">Rs.100</div>
+
+                        </div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <ion-icon name="trash" class="cart-remove"></ion-icon>
+                </div>
+            -->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">Rs.0</div>
+                </div>
+
+                <button class="btn-buy">Place Order</button>
+
+                <ion-icon name="close" id="cart-close"></ion-icon>
+            </div>
+        </div>
+    <style>
+    /* Orange Theme Variables */
+    :root {
+        --primary-orange: #ff7300;
+        --orange-dark: #e65c00;
+        --orange-light: #fff3e0;
+        --text-dark: #222;
+        --text-light: #fff;
+        --border-radius: 10px;
+        --transition: 0.3s;
+        --shadow: 0 4px 16px rgba(255, 115, 0, 0.08);
+    }
+
+    /* Contact Section */
+    .contact {
+        background: var(--orange-light);
+        padding: 40px 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        max-width: 500px;
+        margin: 40px auto 30px auto;
+        text-align: center;
+    }
+
+    .contact h1 {
+        color: var(--primary-orange);
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        width: 90%;
+        padding: 12px 15px;
+        margin: 8px 0;
+        border: 1.5px solid var(--primary-orange);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        background: #fff;
+        color: var(--text-dark);
+        transition: border var(--transition);
+        outline: none;
+    }
+
+    .contact form input:focus,
+    .contact form textarea:focus {
+        border: 2px solid var(--orange-dark);
+    }
+
+    .contact form textarea {
+        min-height: 80px;
+        resize: vertical;
+    }
+
+    .btn2 {
+        background: var(--primary-orange);
+        color: var(--text-light);
+        border: none;
+        padding: 12px 32px;
+        border-radius: var(--border-radius);
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background var(--transition), transform var(--transition);
+        box-shadow: 0 2px 8px rgba(255, 115, 0, 0.12);
+    }
+
+    .btn2:hover {
+        background: var(--orange-dark);
+        transform: translateY(-2px) scale(1.03);
+    }
+
+    /* Footer Section */
+    .footer {
+        background: var(--primary-orange);
+        color: var(--text-light);
+        padding: 35px 20px 20px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-radius: var(--border-radius);
+        margin: 30px 20px 0 20px;
+        box-shadow: var(--shadow);
+    }
+
+    .footer .icons {
+        flex: 2;
+        min-width: 220px;
+        font-size: 1.1rem;
+        margin-bottom: 18px;
+    }
+
+    .footer .icons a,
+    .footer .icons i {
+        color: var(--text-light);
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+        transition: color var(--transition);
+    }
+
+    .footer .icons a:hover,
+    .footer .icons i:hover {
+        color: #ffd180;
+    }
+
+    .footer .links {
+        flex: 1;
+        min-width: 150px;
+        text-align: right;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .footer .links h1 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #fffbe7;
+        font-weight: 700;
+    }
+    .links a{
+        text-decoration: none;
+    }
+
+    .footer .links p {
+        margin: 6px 0;
+        cursor: pointer;
+        transition: color var(--transition);
+    }
+
+    .footer .links p:hover {
+        color: #ffd180;
+        text-decoration: underline;
+    }
+
+    /* Social Logos */
+    .logos {
+        text-align: center;
+        margin: 20px 0 10px 0;
+    }
+
+    .logos hr {
+        border: none;
+        border-top: 2px solid var(--primary-orange);
+        width: 60%;
+        margin: 0 auto 15px auto;
+    }
+
+    .logos i {
+        font-size: 1.7rem;
+        color: var(--primary-orange);
+        margin: 0 12px;
+        transition: color var(--transition), transform var(--transition);
+        cursor: pointer;
+    }
+
+    .logos i:hover {
+        color: var(--orange-dark);
+        transform: scale(1.15);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 700px) {
+        .contact {
+            padding: 25px 8px;
+            max-width: 98vw;
+        }
+        .footer {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 25px 10px 15px 10px;
+            margin: 20px 5px 0 5px;
+        }
+        .footer .links {
+            text-align: left;
+            margin-top: 18px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .logos hr {
+            width: 90%;
+        }
+    }
+    </style>
+
+    <div class="contact">
+        <h1>Get in Touch</h1>
+        <form action="">
+            <input type="text" placeholder="Enter a name"><br><br>
+            <input type="number" placeholder="Enter a phone number"><br><br>
+            <input type="email" placeholder="Enter a email id"><br><br>
+            <textarea name="Feedback" id="">Feedback</textarea><br><br>
+            <button class="btn2">Submit</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="icons">
+            <a href="https://maps.app.goo.gl/8QdmABRfCbXqRbZC8"><i class="fa-solid fa-location-dot"></i> 1939,A, PKN Rd Solai Colony, BYPASS, Sivakasi, Tamil Nadu 626189</a><br>
+            <i class="fa-solid fa-mobile-screen-button"></i> 9789766259,9841236708<br>
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="links">
+            <h1>Our Links</h1>
+            <p><a href="home.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="menu.html">Menu</a></p>
+            <p><a href="location.html">Location</a></p>
+            <p><a href="contact.html">Contact</a></p>
+        </div>
+    </div>
+    <div class="logos">
+        <hr>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+    </div>
+    <script >
+         // Cart open/close logic
+  const btnCart = document.querySelector('#cart-icon');
+  const cart = document.querySelector('.cart');
+  const btnClose = document.querySelector('#cart-close');
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector(".items-cart ul");
+
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+
+  btnCart.addEventListener('click', () => {
+    cart.classList.add('cart-active');
+  });
+
+  btnClose.addEventListener('click', () => {
+    cart.classList.remove('cart-active');
+  });
+
+  document.addEventListener('DOMContentLoaded', loadFood);
+
+  function loadFood() {
+    loadContent();
+  }
+
+  function loadContent() {
+    document.querySelectorAll('.cart-remove').forEach((btn) => {
+      btn.addEventListener('click', removeItem);
+    });
+
+    document.querySelectorAll('.cart-quantity').forEach((input) => {
+      input.addEventListener('change', changeQty);
+    });
+
+    document.querySelectorAll('.add-cart').forEach((btn) => {
+      btn.addEventListener('click', addCart);
+    });
+
+    updateTotal();
+  }
+
+  let itemList = [];
+
+  function removeItem() {
+    if (confirm('Are you sure to remove?')) {
+      this.closest('.cart-box').remove();
+      let title=this.parentElement.querySelector('.cart-food-title').textContent;
+      itemList=itemList.filter(el=>el.title!=title);
+      this.parentElement.remove();
+      loadContent();
+    }
+  }
+
+  function changeQty() {
+    if (isNaN(this.value) || this.value < 1) {
+      this.value = 1;
+    }
+    
+    loadContent();
+
+  }
+
+  function addCart() {
+    let food = this.closest('.box');
+    let title = food.querySelector('h1').textContent;
+    let price = food.querySelector('.food-price').textContent;
+    let imgSrc = food.querySelector('img').src;
+
+    let newProduct = { title, price, imgSrc };
+
+    if (itemList.find((el) => el.title === newProduct.title)) {
+      alert("Product already added to cart");
+      return;
+    }
+
+    itemList.push(newProduct);
+
+    let newProductElement = createCartProduct(title, price, imgSrc);
+    let element = document.createElement('div');
+    element.innerHTML = newProductElement;
+    document.querySelector('.cart-content').append(element);
+
+    loadContent(); // rebind remove and qty
+
+    // Open cart automatically
+    cart.classList.add('cart-active');
+  }
+
+  function createCartProduct(title, price, imgSrc) {
+    return `
+      <div class="cart-box">
+        <img src="${imgSrc}" class="cart-img">
+        <div class="detailed-box">
+          <div class="cart-food-title">${title}</div>
+          <div class="price-box">
+            <div class="cart-price">${price}</div>
+            <div class="cart-amt">${price}</div>
+          </div>
+        </div>
+        <input type="number" value="1" class="cart-quantity">
+        <ion-icon name="trash" class="cart-remove"></ion-icon>
+      </div>
+    `;
+  }
+
+
+  function updateTotal()
+  {
+     const cartItems=document.querySelectorAll('.cart-box');
+     const totalValue=document.querySelector('.total-price');
+
+     let total=0;
+     cartItems.forEach(product=>{
+      let priceElement=product.querySelector('.cart-price');
+      let price=parseFloat(priceElement.textContent.replace("Rs.",""));
+      let qty=product.querySelector('.cart-quantity').value;
+      total+=(price*qty);
+      product.querySelector('.cart-amt').textContent="Rs."+(price*qty);
+     })
+     totalValue.textContent='Rs.'+total;
+
+
+
+     ///Add prouct count in cart icon
+
+     const cartCount=document.querySelector('.cart-count');
+     let count=itemList.length;
+     cartCount.textContent=count;
+
+     if(count==0){
+       cartCount.style.display='none';
+     }
+     else{
+       cartCount.style.display='block';
+     }
+  }
+    </script>
+</body>
+</html>

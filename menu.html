@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pothigai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/menu.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <link rel="icon" type="image" href="pothigai 2.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div class="nav">
+
+    <div class="nav-header">
+      <h1>Pothigai</h1>
+
+      <div class="menu-bar" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="items-cart">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="box1">
+          <div class="cart-count">0</div>
+          <ion-icon name="cart" id="cart-icon"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="cart  ">
+      <div class="cart-title">Cart Items</div>
+      <div class="cart-content">
+<!--
+        <div class="cart-box">
+          <img src="../assets/meals.avif" class="cart-img">
+          <div class="detailed-box">
+            <div class="cart-food-title">Meals</div>
+            <div class="price-box"></div>
+            <div class="cart-price">Rs.100</div>
+            <div class="cart-amt">Rs.100</div>
+
+          </div>
+          <input type="number" value="1" class="cart-quantity">
+        </div>
+        <ion-icon name="trash" class="cart-remove"></ion-icon>
+      </div>
+    -->
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">Rs.0</div>
+      </div>
+
+      <button class="btn-buy">Place Order</button>
+
+      <ion-icon name="close" id="cart-close"></ion-icon>
+    </div>
+  </div>
+
+  <div class="search">
+    <input id="search" type="text" placeholder="search food">
+  </div>
+  <div class="productlist">
+    <div class="bf">
+      <h1>Breakfast</h1>
+      <div class="bf1">
+        <!-- Breakfast items -->
+        <div class="box" data-item="idly">
+          <img src="../assets/idly.jpg" alt="" width="300px" height="220px">
+          <h1>IdlY</h1>
+          <span class="food-price">Rs.12</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="pongal">
+          <img src="../assets/pongal.jpg" alt="" width="300px" height="220px">
+          <h1>Pongal</h1>
+          <span class="food-price">Rs.50</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="poori">
+          <img src="../assets/poori.jpg" alt="" width="300px" height="220px">
+          <h1>Poori Set</h1>
+          <span class="food-price">Rs.40</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="tomatorice">
+          <img src="../assets/tomato rice.jpg" alt="" width="300px" height="220px">
+          <h1>Tomato Rice</h1>
+          <span class="food-price">Rs.45</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="lemonrice">
+          <img src="../assets/lemon rice.jpg" alt="" width="300px" height="220px">
+          <h1>Lemon Rice</h1>
+          <span class="food-price">Rs.45</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="curdrice">
+          <img src="../assets/curd rice.jpg" alt="" width="300px" height="220px">
+          <h1>Curd Rice</h1>
+          <span class="food-price">Rs.45</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="tea">
+          <img src="../assets/tea.jpg" alt="" width="300px" height="220px">
+          <h1>Tea</h1>
+          <span class="food-price">Rs.12</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="coffee">
+          <img src="../assets/coffee.jpg" alt="" width="300px" height="220px">
+          <h1>Coffee</h1>
+          <span class="food-price">Rs.18</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="vadai">
+          <img src="../assets/vadai.jpg" alt="" width="300px" height="220px">
+          <h1>Vadai</h1>
+          <span class="food-price">Rs.10</span><ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div>
+      <hr>
+    </div>
+    <div class="lunch">
+      <h1>Lunch</h1>
+      <div class="lnch">
+        <!-- Lunch items -->
+        <div class="box" data-item="meals">
+          <img src="../assets/meals.avif" alt="" width="300px" height="220px">
+          <h1>Meals</h1>
+          <span class="food-price">Rs.100</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="chicken biriyani">
+          <img src="../assets/chicken biriyani.jpg" alt="" width="300px" height="220px">
+          <h1>Chicken Biriyani</h1>
+          <span class="food-price">Rs.140</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="egg biriyani">
+          <img src="../assets/egg briyani.jpg" alt="" width="300px" height="220px">
+          <h1>Egg Biriyani</h1>
+          <span class="food-price">Rs.120</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="chicken boneless biriyani">
+          <img src="../assets/chicken boneless biriyani.jpg" alt="" width="300px" height="220px">
+          <h1>Chicken Boneless Biriyani</h1>
+          <span class="food-price">Rs.180</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="parotta">
+          <img src="../assets/parotta.jpg" alt="" width="300px" height="220px">
+          <h1>Parotta</h1>
+          <span class="food-price">Rs.14</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="chicken kothu">
+          <img src="../assets/chicken kothu.jpg" alt="" width="300px" height="220px">
+          <h1>Chicken Kothu Parotta</h1>
+          <span class="food-price">Rs.150</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="chicken friedrice">
+          <img src="../assets/chic rice.jpg" alt="" width="300px" height="220px">
+          <h1>Chicken friedrice</h1>
+          <span class="food-price">Rs.120</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="egg friedrice">
+          <img src="../assets/egg rice.jpg" alt="" width="300px" height="220px">
+          <h1>Egg friedrice</h1>
+          <span class="food-price">Rs.100</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="veg friedrice">
+          <img src="../assets/veg rice.jpg" alt="" width="300px" height="220px">
+          <h1>Veg friedrice</h1>
+          <span class="food-price">Rs.90</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="chicken Noodles">
+          <img src="../assets/chic nood.jpg" alt="" width="300px" height="220px">
+          <h1>Chicken Noodles</h1>
+          <span class="food-price">Rs.120</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="egg Noodles">
+          <img src="../assets/egg nood.jpg" alt="" width="300px" height="220px">
+          <h1>Egg Noodles</h1>
+          <span class="food-price">Rs.100</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="veg Noodles">
+          <img src="../assets/veg nood.jpg" alt="" width="300px" height="220px">
+          <h1>Veg Noodles</h1>
+          <span class="food-price">Rs.90</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="paneer friedrice">
+          <img src="../assets/paneer rice.jpg" alt="" width="300px" height="220px">
+          <h1>Paneer friedrice</h1>
+          <span class="food-price">Rs.120</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="Mushroom friedrice">
+          <img src="../assets/mush rice.jpg" alt="" width="300px" height="220px">
+          <h1>Mushroom friedrice</h1>
+          <span class="food-price">Rs.100</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div>
+      <hr>
+    </div>
+    <div class="dinner">
+      <h1>Dinner</h1>
+      <div class="din">
+        <!-- Dinner items -->
+        <div class="box" data-item="idly">
+          <img src="../assets/idly.jpg" alt="" width="300px" height="220px">
+          <h1>Idly</h1>
+          <span class="food-price">Rs.12</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="podi idly">
+          <img src="../assets/podi idly.jpg" alt="" width="300px" height="220px">
+          <h1>Podi Idly</h1>
+          <span class="food-price">Rs.80</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="parotta">
+          <img src="../assets/parotta.jpg" alt="" width="300px" height="220px">
+          <h1>Parotta</h1>
+          <span class="food-price">Rs.14</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="chappathi">
+          <img src="../assets/chappathi.jpg" alt="" width="300px" height="220px">
+          <h1>Chappathi</h1>
+          <span class="food-price">Rs.20</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="chicken kothu">
+          <img src="../assets/chicken kothu.jpg" alt="" width="300px" height="220px">
+          <h1>Chicken Kothu Parotta</h1>
+          <span class="food-price">Rs.150</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="Cake parotta">
+          <img src="../assets/cylon parotta.jpg" alt="" width="300px" height="220px">
+          <h1>Cake Parotta</h1>
+          <span class="food-price">Rs.100</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="bun parotta">
+          <img src="../assets/bun parotta.jpg" alt="" width="300px" height="220px">
+          <h1>Bun Parotta</h1>
+          <span class="food-price">Rs.20</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="vnr parotta">
+          <img src="../assets/vnr parotta.jpg" alt="" width="300px" height="220px">
+          <h1>VNR Parotta</h1>
+          <span class="food-price">Rs.20</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="veechu parotta">
+          <img src="../assets/veechu parotta.jpg" alt="" width="300px" height="220px">
+          <h1> Veechu Parotta</h1>
+          <span class="food-price">Rs.20</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="chicken leaf parotta">
+          <img src="../assets/chic leaf.jpg" alt="" width="300px" height="220px">
+          <h1> Chicken Leaf Parotta</h1>
+          <span class="food-price">Rs.150</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="spl dosa">
+          <img src="../assets/spl dosa.jpg" alt="" width="300px" height="220px">
+          <h1>SPL Dosa</h1>
+          <span class="food-price">Rs.50</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="nice dosa">
+          <img src="../assets/nice dosa.jpg" alt="" width="300px" height="220px">
+          <h1>Nice Dosa</h1>
+          <span class="food-price">Rs.35</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="podi dosa">
+          <img src="../assets/podi dosa.jpg" alt="" width="300px" height="220px">
+          <h1>Podi Dosa</h1>
+          <span class="food-price">Rs.65</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="ghee roast">
+          <img src="../assets/ghee roast.webp" alt="" width="300px" height="220px">
+          <h1>Ghee Roast</h1>
+          <span class="food-price">Rs.70</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="onion utthapam">
+          <img src="../assets/onion utthapam.jpg" alt="" width="300px" height="220px">
+          <h1>Onion Utthapam</h1>
+          <span class="food-price">Rs.60</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="egg spl dosa">
+          <img src="../assets/egg spl.jpg" alt="" width="300px" height="220px">
+          <h1>Egg Spl Dosa</h1>
+          <span class="food-price">Rs.60</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="omlet">
+          <img src="../assets/omlet.jpg" alt="" width="300px" height="220px">
+          <h1>Omlet</h1>
+          <span class="food-price">Rs.20</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="off boil">
+          <img src="../assets/off boil.jpg" alt="" width="300px" height="220px">
+          <h1>Off Boil</h1>
+          <span class="food-price">Rs.15</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="valiyal">
+          <img src="../assets/valiyal.jpg" alt="" width="300px" height="220px">
+          <h1>Valiyal</h1>
+          <span class="food-price">Rs.25</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div>
+      <hr>
+    </div>
+    <div>
+      <h1>Chineese Fastfood</h1>
+      <div class="chin">
+        <!-- Chinese Fastfood items -->
+        <div class="box" data-item="chicken friedrice">
+          <img src="../assets/chic rice.jpg" alt="" width="300px" height="220px">
+          <h1>Chicken friedrice</h1>
+          <span class="food-price">Rs.120</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="egg friedrice">
+          <img src="../assets/egg rice.jpg" alt="" width="300px" height="220px">
+          <h1>Egg friedrice</h1>
+          <span class="food-price">Rs.100</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="veg friedrice">
+          <img src="../assets/veg rice.jpg" alt="" width="300px" height="220px">
+          <h1>Veg friedrice</h1>
+          <span class="food-price">Rs.90</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="chicken Noodles">
+          <img src="../assets/chic nood.jpg" alt="" width="300px" height="220px">
+          <h1>Chicken Noodles</h1>
+          <span class="food-price">Rs.120</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="egg Noodles">
+          <img src="../assets/egg nood.jpg" alt="" width="300px" height="220px">
+          <h1>Egg Noodles</h1>
+          <span class="food-price">Rs.100</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="veg Noodles">
+          <img src="../assets/veg nood.jpg" alt="" width="300px" height="220px">
+          <h1>Veg Noodles</h1>
+          <span class="food-price">Rs.90</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="paneer friedrice">
+          <img src="../assets/paneer rice.jpg" alt="" width="300px" height="220px">
+          <h1>Paneer friedrice</h1>
+          <span class="food-price">Rs.120</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="Mushroom friedrice">
+          <img src="../assets/mush rice.jpg" alt="" width="300px" height="220px">
+          <h1>Mushroom friedrice</h1>
+          <span class="food-price">Rs.100</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="boneless">
+          <img src="../assets/boneless.jpg" alt="" width="300px" height="220px">
+          <h1>Boneless</h1>
+          <span class="food-price">Rs.100</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+         <div class="box" data-item="chicken Lolipop">
+          <img src="/assets/chick loli.jpg" alt="" width="300px" height="220px">
+          <h1>Chicken Lolipop</h1>
+          <span class="food-price">Rs.160</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+         <div class="box" data-item="Dragon">
+          <img src="/assets/dragon.jpg" alt="" width="300px" height="220px">
+          <h1>Dragon</h1>
+          <span class="food-price">Rs.140</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+         <div class="box" data-item="chilli chicken dry">
+          <img src="/assets/chilli chic dry.jpg" alt="" width="300px" height="220px">
+          <h1>Chilli Chicken Dry</h1>
+          <span class="food-price">Rs.140</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+         <div class="box" data-item="pepper chicken dry">
+          <img src="/assets/pepper dry.jpg" alt="" width="300px" height="220px">
+          <h1>Pepper Chicken Dry</h1>
+          <span class="food-price">Rs.140</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+         <div class="box" data-item="Chettinad chicken Gravy">
+          <img src="/assets/chettinad.jpg" alt="" width="300px" height="220px">
+          <h1>Chettinad Chicken Gravy</h1>
+          <span class="food-price">Rs.150</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        <div class="box" data-item="Pepper chicken Gravy">
+          <img src="/assets/pepper.jpg" alt="" width="300px" height="220px">
+          <h1>Pepper Chicken Gravy</h1>
+          <span class="food-price">Rs.150</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+         <div class="box" data-item="butter chicken Gravy">
+          <img src="/assets/butter.jpg" alt="" width="300px" height="220px">
+          <h1>Butter Chicken Gravy</h1>
+          <span class="food-price">Rs.150</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+         <div class="box" data-item="andra chicken Gravy">
+          <img src="/assets/andra.jpg" alt="" width="300px" height="220px">
+          <h1>Andra Chicken Gravy</h1>
+          <span class="food-price">Rs.150</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+         <div class="box" data-item="kadaai chicken Gravy">
+          <img src="/assets/kadaai.jpg" alt="" width="300px" height="220px">
+          <h1>Kadaai Chicken Gravy</h1>
+          <span class="food-price">Rs.150</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+         <div class="box" data-item="paneer butter masala">
+          <img src="/assets/paneer butter.jpg" alt="" width="300px" height="220px">
+          <h1>Paneer Butter Masala</h1>
+          <span class="food-price">Rs.150</span>
+          <ion-icon name="cart" class="add-cart"></ion-icon>
+        </div>
+        
+      </div>
+    </div>
+    <script>
+      // Cart open/close logic
+  const btnCart = document.querySelector('#cart-icon');
+  const cart = document.querySelector('.cart');
+  const btnClose = document.querySelector('#cart-close');
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector(".items-cart ul");
+
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+
+  btnCart.addEventListener('click', () => {
+    cart.classList.add('cart-active');
+  });
+
+  btnClose.addEventListener('click', () => {
+    cart.classList.remove('cart-active');
+  });
+
+  document.addEventListener('DOMContentLoaded', loadFood);
+
+  function loadFood() {
+    loadContent();
+  }
+
+  function loadContent() {
+    document.querySelectorAll('.cart-remove').forEach((btn) => {
+      btn.addEventListener('click', removeItem);
+    });
+
+    document.querySelectorAll('.cart-quantity').forEach((input) => {
+      input.addEventListener('change', changeQty);
+    });
+
+    document.querySelectorAll('.add-cart').forEach((btn) => {
+      btn.addEventListener('click', addCart);
+    });
+
+    updateTotal();
+  }
+
+  let itemList = [];
+
+  function removeItem() {
+    if (confirm('Are you sure to remove?')) {
+      this.closest('.cart-box').remove();
+      let title=this.parentElement.querySelector('.cart-food-title').textContent;
+      itemList=itemList.filter(el=>el.title!=title);
+      this.parentElement.remove();
+      loadContent();
+    }
+  }
+
+  function changeQty() {
+    if (isNaN(this.value) || this.value < 1) {
+      this.value = 1;
+    }
+    
+    loadContent();
+
+  }
+
+  function addCart() {
+    let food = this.closest('.box');
+    let title = food.querySelector('h1').textContent;
+    let price = food.querySelector('.food-price').textContent;
+    let imgSrc = food.querySelector('img').src;
+
+    let newProduct = { title, price, imgSrc };
+
+    if (itemList.find((el) => el.title === newProduct.title)) {
+      alert("Product already added to cart");
+      return;
+    }
+
+    itemList.push(newProduct);
+
+    let newProductElement = createCartProduct(title, price, imgSrc);
+    let element = document.createElement('div');
+    element.innerHTML = newProductElement;
+    document.querySelector('.cart-content').append(element);
+
+    loadContent(); // rebind remove and qty
+
+    // Open cart automatically
+    cart.classList.add('cart-active');
+  }
+
+  function createCartProduct(title, price, imgSrc) {
+    return `
+      <div class="cart-box">
+        <img src="${imgSrc}" class="cart-img">
+        <div class="detailed-box">
+          <div class="cart-food-title">${title}</div>
+          <div class="price-box">
+            <div class="cart-price">${price}</div>
+            <div class="cart-amt">${price}</div>
+          </div>
+        </div>
+        <input type="number" value="1" class="cart-quantity">
+        <ion-icon name="trash" class="cart-remove"></ion-icon>
+      </div>
+    `;
+  }
+
+
+  function updateTotal()
+  {
+     const cartItems=document.querySelectorAll('.cart-box');
+     const totalValue=document.querySelector('.total-price');
+
+     let total=0;
+     cartItems.forEach(product=>{
+      let priceElement=product.querySelector('.cart-price');
+      let price=parseFloat(priceElement.textContent.replace("Rs.",""));
+      let qty=product.querySelector('.cart-quantity').value;
+      total+=(price*qty);
+      product.querySelector('.cart-amt').textContent="Rs."+(price*qty);
+     })
+     totalValue.textContent='Rs.'+total;
+
+
+
+     ///Add prouct count in cart icon
+
+     const cartCount=document.querySelector('.cart-count');
+     let count=itemList.length;
+     cartCount.textContent=count;
+
+     if(count==0){
+       cartCount.style.display='none';
+     }
+     else{
+       cartCount.style.display='block';
+     }
+  }
+
+   // Search logic (unchanged)
+  const searchInput = document.getElementById('search');
+  searchInput?.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll('.box').forEach(box => {
+      const title = box.querySelector('h1').textContent.toLowerCase();
+      box.style.display = title.includes(query) ? '' : 'none';
+    });
+
+    document.querySelectorAll('.bf, .lunch, .dinner, .chin').forEach(section => {
+      const visibleBoxes = section.querySelectorAll('.box:not([style*="display: none"])');
+      section.style.display = visibleBoxes.length ? '' : 'none';
+    });
+  });
+
+    </script>
+</body>
+
+</html>

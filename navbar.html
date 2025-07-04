@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="icon" type="image" href="pothigai 2.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+
+<body>
+    <header>
+    <div class="nav">
+
+        <div class="nav-header">
+            <h1>Pothigai</h1>
+
+            <div class="menu-bar" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="items-cart">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="box1">
+                    <div class="cart-count">0</div>
+                    <ion-icon name="cart" id="cart-icon"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="cart">
+            <div class="cart-title">Cart Items</div>
+            <div class="cart-content">
+
+                <div class="cart-box">
+                    <img src="../assets/meals.avif" class="cart-img">
+                    <div class="detailed-box">
+                        <div class="cart-food-title">Meals</div>
+                        <div class="price-box"></div>
+                        <div class="cart-price">Rs.100</div>
+                        <div class="cart-amt">Rs.100</div>
+
+                    </div>
+                    <input type="number" value="1" class="cart-quantity">
+                </div>
+                <ion-icon name="trash" class="cart-remove"></ion-icon>
+            </div>
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">Rs.0</div>
+            </div>
+
+            <button class="btn-buy">Place Order</button>
+
+            <ion-icon name="close" id="cart-close"></ion-icon>
+        </div>
+
+     <script>
+            const btnCart = document.querySelector('#cart-icon');
+            const cart = document.querySelector('.cart');
+            const btnClose = document.querySelector('#cart-close');
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.querySelector(".items-cart ul");
+
+            menuToggle.addEventListener("click", () => {
+                menuToggle.classList.toggle("active");
+                navLinks.classList.toggle("active");
+            });
+
+            btnCart.addEventListener('click', () => {
+                cart.classList.add('cart-active');
+            });
+
+
+            btnClose.addEventListener('click', () => {
+                cart.classList.remove('cart-active');
+            });
+
+            document.addEventListener('DOMContentLoaded', loadfood);
+
+            function loadfood() {
+                loadcontent();
+            }
+
+            function loadcontent() {
+
+                let btnremove = document.querySelectorAll('.cart-remove');
+                btnremove.forEach((btn) => {
+                    btn.addEventListener('click', removeitem);
+                });
+            }
+
+            function removeitem() {
+                this.parentElement.remove();
+            }
+        </script>
+    </header>
+</body>
+
+</html>
